@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Ejercicios</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #00FFAB;
+        }
+        .neon-button {
+            background-color: #39FF14;
+            color: #0f0f0f;
+            box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
+        }
+        .neon-button:hover {
+            background-color: #00FFAB;
+            box-shadow: 0 0 15px #00FFAB, 0 0 25px #00FFAB, 0 0 35px #00FFAB;
+        }
+        .bg-gray-800 {
+            background-color: #2a2a2a;
+        }
+        .bg-white {
+            background-color: #0f0f0f;
+        }
+        .text-black {
+            color: #39FF14;
+        }
+        .bg-red-500 {
+            background-color: #FF073A;
+        }
+        .bg-red-500:hover {
+            background-color: #FF4561;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto mt-10">
+        <h1 class="text-4xl font-bold text-center mb-6" style="color: #00FFAB;">Aplicación de Ejercicios</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Ejercicio 1 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-4">Productos Disponibles y Retirados</h2>
+                <button class="neon-button text-white px-4 py-2 rounded" onclick="mostrarProductosModal()">Ejecutar</button>
+            </div>
+
+            <!-- Ejercicio 2 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-4">Pares e Impares</h2>
+                <button class="neon-button text-white px-4 py-2 rounded" onclick="mostrarParesImparesModal()">Ejecutar</button>
+            </div>
+
+            <!-- Ejercicio 3 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-4">Aprobados y Reprobados</h2>
+                <button class="neon-button text-white px-4 py-2 rounded" onclick="mostrarAprobadosModal()">Ejecutar</button>
+            </div>
+
+            <!-- Ejercicio 4 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-4">Eliminar y Ordenar Productos</h2>
+                <button class="neon-button text-white px-4 py-2 rounded" onclick="mostrarEliminarProductosModal()">Ejecutar</button>
+            </div>
+
+            <!-- Ejercicio 5 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-4">Listar Palabras por Letra</h2>
+                <button class="neon-button text-white px-4 py-2 rounded" onclick="mostrarPalabrasModal()">Ejecutar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal Template -->
+    <div id="modal-template" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center">
+        <div class="bg-white text-black rounded-lg shadow-lg p-6 w-96">
+            <div id="modal-content">
+                <!-- Contenido de los modales -->
+            </div>
+            <button class="bg-red-500 text-white px-4 py-2 rounded mt-4" onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
